@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  background: #000;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.yellow__button {
+  width: 220px;
+  height: 55px;
+  font-size: 20px;
+  background-color: #BDAE82;
+  border: #BDAE82 2px solid;
+  transition: 0.7s;
+}
+.yellow__button:hover, .yellow__button:focus{
+  box-shadow: 0 0.5em 0.5em -0.4em #BDAE82;
+  transform: translatey(-0.65em);
+  color: white;
+}
+
+/* header style start*/
+header {
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  justify-content: end;
+  background-image: url(./assets/img/fondark2.jpg);
+  background-size: 100%;
+}
+.header__nav-wrap {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  margin-right: 20%;
+}
+.header__nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  background: none;
+}
+.header__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__item {
+  margin-right: 33px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  letter-spacing: 0;
+  font-weight: 200;
+  line-height: 26px;
+}
+.header__item:last-child {
+  margin-right: 10px;
+}
+.header__item a {
+  font-size: 20px;
+}
+.header__swith {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+  margin-right: 1em;
+}
+.active__button.active {
+  color: #BDAE82;
+}
+.header__button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.header__button:hover {
+  color: #BDAE82;
+  transition: 0.7s;
+}
+.header__swith-en {
+  margin-right: 0.5em;
+}
+.header__swith-ru {
+  margin-right: 1em;
+  margin-left: 0.5em;
+}
+.header__link {
+  font-size: 1.2em;
+  line-height: 1em;
+  color: #FFFFFF;
+}
+.header__link:hover, .header__link:focus, .header__link:active {
+  color: #BDAE82;
+  transition: 0.7s;
+}
+.header__link:active {
+  color: white;
+}
+.header__burger {
+  display: none;
+}
+.header__theme-button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: url('../assets/svg/carbon_sun.svg');
+  cursor: pointer;
+}
+.header__theme-button:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+  contrast(87%);
+  transition: 0.7s;
+}
+
+/* header style end*/
+
+/* myTitle style start*/
+main {
+  width: 100%;
+}
+.title {
+  height: 55em;
+  display: flex;
+  justify-content: center;
+  background: Url(./assets/img/fondark2.jpg) no-repeat;
+  background-size: 100%;
+  background-position: 0 -90px;
+}
+.dsongentom{
+  top: 30%;  
+  width: 10em;
+  height: 1.3em;
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-size: 2.5em;
+  border-right: 2px solid rgba(255,255,255,.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-40%);  
+  margin-top: 8em;
+  margin-right: 8em;
+}
+
+.desetungavon{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 15.6em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+/* myTitle style end*/
+
