@@ -226,3 +226,5 @@ toggleButtons.forEach((e) => {
 });
 volume.addEventListener('input', updateVolume);
 mute.addEventListener('click', updateMute)
+
+
