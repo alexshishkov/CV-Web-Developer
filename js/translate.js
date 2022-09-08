@@ -1,11 +1,11 @@
 const i18Obj = {
   'en': {
+      'aboutMe': 'AboutMe',
       'skills': 'Skills',
+      'works': 'Works',
       'portfolio': 'Portfolio',
-      'video': 'Video',
-      'price': 'Price',
       'contacts': 'Contacts',
-      'hero-title': 'Alexa Rise',
+      'name': 'Alexey Shishkov',
       'hero-text': 'Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise',
       'hire': 'Hire me',
       'skill-title-1': 'Digital photography',
@@ -43,12 +43,12 @@ const i18Obj = {
       'send-message': 'Send message'
   },
   'ru' : {
+      'aboutMe': 'Обо мне',
       'skills': 'Навыки',
+      'works': 'Работы',
       'portfolio': 'Портфолио',
-      'video': 'Видео',
-      'price': 'Цены',
       'contacts': 'Контакты',
-      'hero-title': 'Алекса Райс',
+      'name': 'Алексей Шишков',
       'hero-text': 'Сохраните искренние эмоции, романтические переживания и счастливые моменты жизни вместе с профессиональным фотографом',
       'hire': 'Пригласить',
       'skill-title-1': 'Фотография',
