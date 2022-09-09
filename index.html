@@ -37,19 +37,19 @@
               >
             </li>
             <li class="header__item">
-              <a href="#contact" class="header__link" data-i18="contacts" ></a>
+              <a href="#contact" class="header__link" data-i18="contacts"></a>
             </li>
           </ul>
         </nav>
         <div class="header__swith">
           <button
-            class="header__button header__swith-en active__button languageEn"
+            class="header__button header__swith-en active__button languageEn" data-i18="en"
           >
             en
           </button>
           <div>/</div>
           <button
-            class="header__button header__swith-ru active__button languageRu"
+            class="header__button header__swith-ru active__button languageRu" data-i18="ru"
           >
             ru
           </button>
@@ -66,11 +66,11 @@
     <main>
       <div class="container">
         <section class="name">
-          <div class="name__wrapper" data-aos="fade-up" data-aos-duration="1500">
+          <div class="name__wrapper" data-aos="fade-up" data-aos-duration="500">
             <div class="name__info">
               <div class="name__info-wrapper">
                 <h1 class="name__info-name" data-i18="name"></h1>
-                <div class="name__info-position">Web - developer</div>
+                <div class="name__info-position" data-i18="position">Web - developer</div>
               </div>
               <div class="name__contacts-wrap" id="aboutMe">
                 <div class="name__info-contacts">
@@ -120,8 +120,7 @@
           </div>
         </section>
         <section class="aboutMe">
-          <div class="aboutMe__info" data-aos="fade-up"
-          data-aos-duration="2000">
+          <div class="aboutMe__info" data-aos="fade-up" data-aos-duration="2000" data-i18="aboutMe-info">
             Innovative and highly driven Front-End Developer with experience in
             creating SPA applications using React. Always eager to
             learn and look for ways to continuously upgrade my technical
@@ -131,16 +130,16 @@
             suggestions!
           </div>
           <div class="aboutMe__contactMe-button" id="skills">
-            <a href="#contact"><div class='button'>CONTACT ME</div></a>
+            <a href="#contact"><div class='button' data-i18="contactMe">CONTACT ME</div></a>
           </div>
         </section>
         <section class="skills">
           <div class="title">
             <img src="./assets/img/skills.png" alt="" />
-            <h2>Skills</h2>
+            <h2 data-i18="skills">Skills</h2>
           </div>
-          <div class="skills__info">
-            <div class="skills__skill-wrap-top" data-aos="fade-right" data-aos-duration="1500">
+          <div class="skills__info" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="skills__skill-wrap-top">
               <div class="skills__skill skills__skill-top">
                 <img src="./assets/img/icons8-html-5-100.png" alt="HTML" />
                 <div>HTML</div>
@@ -159,15 +158,15 @@
               </div>
             </div>
             <div class="skills__skill-wrap-bottom">
-              <div class="skills__skill skills__skill-bottom" data-aos="fade-left" data-aos-duration="2000">
+              <div class="skills__skill skills__skill-bottom">
                 <img src="./assets/img/icons8-реакция-100.png" alt="REACT" />
                 <div>REACT</div>
               </div>
-              <div class="skills__skill skills__skill-bottom" data-aos="fade-left">
+              <div class="skills__skill skills__skill-bottom">
                 <img src="./assets/img/icons8-git-100.png" alt="GIT" />
                 <div>GIT</div>
               </div>
-              <div class="skills__skill skills__skill-bottom" data-aos="fade-left">
+              <div class="skills__skill skills__skill-bottom">
                 <img src="./assets/img/scss.png" alt="SCSS" />
                 <div>SCSS</div>
               </div>
@@ -177,16 +176,16 @@
         <section class="portfolio" id="works">
           <div class="title">
             <img src="./assets/img/portfolio.png" alt="" />
-            <h2>Works</h2>
+            <h2 data-i18="works">Works</h2>
           </div>
           <div class="portfolio__info">
-            <div class="portfolio__card-wrapper" data-aos="fade-up-right" data-aos-duration="1000">
+            <div class="portfolio__card-wrapper" data-aos="fade-up" data-aos-duration="1000">
               <a
                 href="https://rolling-scopes-school.github.io/alexshishkov-JSFEPRESCHOOL/random-jokes/"
                 class="portfolio__card"
               >
                 <img src="./assets/img/random-jokes.jpg" alt="random-jokes" />
-                <div>Random jokes</div>
+                <div class='portfolio__card-name'>Random jokes</div>
               </a>
               <div class="portfolio__card-title">
                 <div class="portfolio__card-titleText">
@@ -195,7 +194,7 @@
               </div>
             </div>
 
-            <div class="portfolio__card-wrapper left" data-aos="fade-up-left" data-aos-duration="1000">
+            <div class="portfolio__card-wrapper left" data-aos="fade-down" data-aos-duration="1000">
               <div class="portfolio__card-title">
                 <div class="portfolio__card-titleText">
                   <div>S</div>
@@ -206,17 +205,17 @@
                 class="portfolio__card"
               >
                 <img src="./assets/img/shelter.jpg" alt="Shelter" />
-                <div>Shelter</div>
+                <div class='portfolio__card-name'>Shelter</div>
               </a>
             </div>
 
-            <div class="portfolio__card-wrapper" data-aos="fade-up-right" data-aos-duration="1000">
+            <div class="portfolio__card-wrapper" data-aos="fade-up" data-aos-duration="1000">
               <a
                 href="https://rolling-scopes-school.github.io/alexshishkov-JSFEPRESCHOOL/portfolio/"
                 class="portfolio__card"
               >
                 <img src="./assets/img/photo.jpg" alt="photo" />
-                <div>photographer's landing page</div>
+                <div class='portfolio__card-name'>photographer's landing page</div>
               </a>
               <div class="portfolio__card-title">
                 <div class="portfolio__card-titleText">
@@ -225,7 +224,7 @@
               </div>
             </div>
 
-            <div class="portfolio__card-wrapper left" data-aos="fade-up-left" data-aos-duration="1000">
+            <div class="portfolio__card-wrapper left" data-aos="fade-down" data-aos-duration="1000">
               <div class="portfolio__card-title">
                 <div class="portfolio__card-titleText">
                   <div>R</div>
@@ -236,17 +235,17 @@
                 class="portfolio__card"
               >
                 <img src="./assets/img/react.jpg" alt="react store" />
-                <div>React online store</div>
+                <div class='portfolio__card-name'>React online store</div>
               </a>
             </div>
 
-            <div class="portfolio__card-wrapper" data-aos="fade-up-right" data-aos-duration="1000">
+            <div class="portfolio__card-wrapper" data-aos="fade-up" data-aos-duration="1000">
               <a
                 href="https://alexshishkov.github.io/spring-landing-page/"
                 class="portfolio__card"
               >
                 <img src="./assets/img/spring.jpg" alt="Spring factory" />
-                <div>Spring factory</div>
+                <div class='portfolio__card-name'>Spring factory</div>
               </a>
               <div class="portfolio__card-title">
                 <div class="portfolio__card-titleText">
@@ -255,7 +254,7 @@
               </div>
             </div>
 
-            <div class="portfolio__card-wrapper left" data-aos="fade-up-left" data-aos-duration="1000">
+            <div class="portfolio__card-wrapper left" data-aos="fade-down" data-aos-duration="1000">
               <div class="portfolio__card-title">
                 <div class="portfolio__card-titleText">
                   <div>V</div>
@@ -266,7 +265,7 @@
                 class="portfolio__card"
               >
                 <img src="./assets/img/keyboard.jpg" alt="keyboard" />
-                <div>Virtual keyboard</div>
+                <div class='portfolio__card-name'>Virtual keyboard</div>
               </a>
             </div>
           </div>
@@ -274,20 +273,19 @@
         <section class="contact" id="contact" data-aos="zoom-in" data-aos-duration="1200">
           <div class="title">
             <img src="./assets/img/contact.png" alt="contact" />
-            <h2>Contact</h2>
+            <h2 data-i18="contacts">Contact</h2>
           </div>
           <div class='contact__wrapper'>
             <form class="contact__forms">
-                  <label>
-                    <textarea class="contact__input" name="" id="" placeholder="Name" cols="70" rows="1"></textarea>
-                  </label>
-                  <label>
-                    <textarea class="contact__input" name="" id="" placeholder="Last Name" cols="70" rows="1"></textarea>
-                  </label>
-                  <label>
-                    <textarea class="contact__input last-input" name="" id="" placeholder="Subject" cols="70" rows="5"></textarea>
-                  </label>
-                  <div data-i18="send"><div class="button">Send</div></div>
+            
+                    <textarea class="contact__input contact__input-name" name="" id="" placeholder="Name" cols="70" rows="1"></textarea>
+         
+    
+                    <textarea class="contact__input contact__input-last-name" name="" id="" placeholder="Last Name" cols="70" rows="1"></textarea>
+                
+                    <textarea class="contact__input last-input subject" name="" id="" placeholder="Subject" cols="70" rows="5"></textarea>
+
+                  <div><div class="button" data-i18="send">Send</div></div>
           </form>
           </div>
         </section>

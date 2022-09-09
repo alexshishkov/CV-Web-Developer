@@ -55,8 +55,6 @@ li {
 }
 .button:hover {
   width: 14em;
-  font-weight: 900;
-
   transition: 0.7s;
 }
 
@@ -77,6 +75,7 @@ header {
   margin-left: 15%;
 }
 .header__nav {
+  background: none;
   display: flex;
   align-items: center;
 }
@@ -437,7 +436,7 @@ main {
 }
 .left {
   margin-right: 0;
-  margin-left: 29em;
+  margin-left: 29.2em;
 }
 
 /* portfolio style end*/
@@ -492,7 +491,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3em;
 }
 
 /* footer style end*/
@@ -504,6 +502,7 @@ footer {
   .arrow {
     width: 35px;
     height: 35px;
+    font-size: 1.5em;
     right: 0.5em;
     bottom: 0.5em;
   }
@@ -611,19 +610,19 @@ footer {
     width: 30px;
     height: 3px;
     background: #04a863;
-    margin: 2px 0;
+    margin: 3px 0;
     z-index: 15;
     transition: 0.7s;
   }
   .hamburger.open .line1 {
-    transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-7px, 5px);
     background: white;
   }
   .hamburger.open .line2 {
     opacity: 0;
   }
   .hamburger.open .line3 {
-    transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-7px, -5px);
     background: white;
   }
   .header__list {
@@ -645,10 +644,14 @@ footer {
     transform: translateX(24%);
   }
   .arrow {
-    display: none;
+    width: 30px;
+    height: 30px;
+    right: 2em;
+    bottom: 2.6em;
+    font-size: 1em;
   }
   .container {
-    max-width: 90%;
+    width: 90%;
   }
   .name__wrapper {
     height: 100%;
@@ -702,6 +705,9 @@ footer {
   .aboutMe__info {
     padding: 1em;
   }
+  .portfolio {
+    justify-content: space-between;
+  }
   .portfolio__info {
     height: 100%;
   }
@@ -711,16 +717,13 @@ footer {
   .portfolio__card-wrapper {
     height: 100px;
     margin-right: 0;
-    margin-bottom: 3em;
+    margin-bottom: 50%;
   }
   .portfolio__card {
-    width: 230px;
+    font-size: 1.4em;
   }
   .portfolio__card img {
-    width: 230px;
-  }
-  .portfolio__card div {
-    font-size: 1em;
+    width: 100%;
   }
   .portfolio__card-titleText {
     display: none;
@@ -746,15 +749,59 @@ footer {
     margin-left: 0;
   }
   footer {
-    margin-top: 1em;
+    height: 4em;
+  }
+}
+@media (max-width: 480px) {
+  .title img {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+  .title h2 {
+    font-size: 2em;
+  }
+  .skills {
+    margin-top: 2em;
+  }
+  .skills__info {
+    margin-top: 2em;
+    padding: 0.2em;
+  }
+  .skills__skill-top img {
+    width: 60px;
+    height: 60px;
+  }
+  .skills__skill-bottom img {
+    width: 60px;
+    height: 60px;
+  }
+  .skills__skill div {
+    font-size: 0.9em;
+  }
+  .skills__skill-wrap-top {
+    padding-bottom: 0.5em;
+  }
+  .skills__skill-top:after {
+    width: 1.2em;
+    margin-top: 0.5em;
+  }
+  .skills__skill-wrap-bottom {
+    padding-top: 0.5em;
+  }
+  .skills__skill-bottom:before {
+    width: 1.2em;
+    margin-bottom: 0.5em;
   }
 }
 
 /* change theme start */
-
 .dark-theme {
   background: #252525;
   color: #686868;
+}
+.dark-arrow {
+  background: #686868;
 }
 .dark-footer-input {
   color: #686868;
@@ -772,6 +819,9 @@ footer {
 .dark-button-theme {
   background: url(./assets/img/moon.png);
   background-size: 100%;
+}
+.dark-card-name {
+  color: #686868;
 }
 
 /* change theme end */

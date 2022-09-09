@@ -2,25 +2,25 @@ import i18Obj from '../JS/translate.js';
 
 // burger start
 
-const header__nav = document.querySelector('.header__nav');
+const nav = document.querySelector('.header__nav');
 const hamburger = document.querySelector('.hamburger');
-const elementsArray  = document.querySelectorAll ('.header__item');
+const arrayLinks  = document.querySelectorAll ('.header__item');
 
 function toggleMenu() {
     hamburger.classList.toggle('open');
-    header__nav.classList.toggle('header__nav_active');
+    nav.classList.toggle('header__nav_active');
 }
 
 function toggleMenuHumburger() {
     hamburger.classList.toggle('open');
-    header__nav.classList.toggle('header__nav_active');
-    if (theme === 'light') {
-        header__nav.classList.toggle('light-theme')
+    nav.classList.toggle('header__nav_active');
+    if (theme === 'dark') {
+        nav.classList.add('dark-theme')
     }
 }
 hamburger.addEventListener('click', toggleMenuHumburger);
 
-elementsArray.forEach(function(elem) {
+arrayLinks.forEach(function(elem) {
     elem.addEventListener('click', toggleMenu)
 });
 
@@ -30,15 +30,20 @@ elementsArray.forEach(function(elem) {
 
 let languageEn = document.querySelector('.languageEn');
 let languageRu = document.querySelector('.languageRu');
+const inputName = document.querySelector(".contact__input-name");
+const lastName = document.querySelector(".contact__input-last-name");
+const subject = document.querySelector(".subject");
 
+languageEn.addEventListener('click', () => translation('en'))
+languageRu.addEventListener('click', () => translation('ru'))
 
-languageEn.addEventListener('click', () => getTranslate('en'))
-languageRu.addEventListener('click', () => getTranslate('ru'))
-
-function getTranslate(lang) {
+function translation(lang) {
     const text = document.querySelectorAll('[data-i18]');
     text.forEach((el) => {
             el.textContent = i18Obj[lang][el.getAttribute('data-i18')]
+            inputName.placeholder = i18Obj[lang].inputName
+            lastName.placeholder = i18Obj[lang].inputLastName
+            subject.placeholder = i18Obj[lang].subject
         }
     )
     localStorage.setItem('lang', lang)
@@ -47,25 +52,21 @@ function getTranslate(lang) {
 //  translate end
 
 //  change theme start
+const themeButton = document.querySelector('.header__theme-button');
 const main = document.querySelector('main')
 const footer = document.querySelector('footer');
-const themeBtn = document.querySelector('.header__theme-button');
 const buttons = document.querySelectorAll('.button')
 const nameInfo = document.querySelector('.name__info');
-const nameImgs = document.querySelectorAll('.img');
+const Imgs = document.querySelectorAll('.img');
 const nameImg = document.querySelector('.name__img');
 const nameSection = document.querySelector('.name__wrapper');
-const themeButton = document.querySelector('.header__theme-button');
 const inputs = document.querySelectorAll('.contact__input');
+const portfolioCardName = document.querySelectorAll('.portfolio__card-name');
+const headerLink = document.querySelectorAll('.header__link');
+const arrow = document.querySelector('.arrow');
 
 
-
-
-
-
-
-
-themeBtn.addEventListener('click',  () =>  changeTheme(themeArr, theme) )
+themeButton.addEventListener('click',  () =>  changeTheme(themeArr, theme) )
 
 const themeArr = [
     main,
@@ -83,12 +84,22 @@ let changeTheme = (themeArr) => {
     buttons.forEach((e) => {
         e.classList.toggle('dark-button')
     })
-    nameImgs.forEach((e) => {
+    Imgs.forEach((e) => {
         e.classList.toggle('name__img-dark')
     })
     inputs.forEach((e) => {
         e.classList.toggle('dark-footer-input')
     })
+    portfolioCardName.forEach((e) => {
+        e.classList.toggle('dark-card-name')
+    })
+    if(window.screen.width < 750) {
+        headerLink.forEach((e) => {
+            e.classList.toggle('dark-card-name')
+        })
+        nav.classList.toggle('dark-theme')
+    }
+    arrow.classList.toggle('dark-arrow')
     nameImg.classList.toggle('dark-img')
     themeButton.classList.toggle('dark-button-theme')
     if (theme === 'light') {
@@ -96,6 +107,26 @@ let changeTheme = (themeArr) => {
     } else theme = 'light'
 }
 
+window.addEventListener('resize', function() {
+    changingNavigationFromScreenWidth();
+  });
+
+  function changingNavigationFromScreenWidth() {
+    var w = window.innerWidth;
+    if (w > 750) {
+        hamburger.classList.remove('open');
+        nav.classList.remove('header__nav_active');
+        nav.classList.remove('dark-theme');
+        headerLink.forEach((e) => {
+            e.classList.remove('dark-card-name')
+        })
+    } else if(w < 750 && theme === 'dark') {
+        headerLink.forEach((e) => {
+            e.classList.add('dark-card-name')
+        })
+        nav.classList.add('dark-theme');
+    }
+  }
 
 //  change theme end
 
@@ -116,9 +147,9 @@ function getLocalStorage() {
     if (localStorage.getItem('lang')) {
         const lang = localStorage.getItem('lang');
         if (lang === 'en') {
-            getTranslate('en')
+            translation('en')
         } else if (lang === 'ru') {
-            getTranslate('ru')
+            translation('ru')
         }
     }
 }
