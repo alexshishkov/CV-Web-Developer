@@ -5,6 +5,7 @@ import i18Obj from '../JS/translate.js';
 const nav = document.querySelector('.header__nav');
 const hamburger = document.querySelector('.hamburger');
 const arrayLinks  = document.querySelectorAll ('.header__item');
+const arrow = document.querySelector('.arrow');
 
 function toggleMenu() {
     hamburger.classList.toggle('open');
@@ -24,6 +25,11 @@ arrayLinks.forEach(function(elem) {
     elem.addEventListener('click', toggleMenu)
 });
 
+arrow.addEventListener('click', () => {
+    nav.classList.remove('header__nav_active');
+    hamburger.classList.remove('open');
+} )
+
 // burger end
 
 //  translate start
@@ -31,7 +37,7 @@ arrayLinks.forEach(function(elem) {
 let languageEn = document.querySelector('.languageEn');
 let languageRu = document.querySelector('.languageRu');
 const inputName = document.querySelector(".contact__input-name");
-const lastName = document.querySelector(".contact__input-last-name");
+const email = document.querySelector(".contact__input-email");
 const subject = document.querySelector(".subject");
 
 languageEn.addEventListener('click', () => translation('en'))
@@ -42,7 +48,7 @@ function translation(lang) {
     text.forEach((el) => {
             el.textContent = i18Obj[lang][el.getAttribute('data-i18')]
             inputName.placeholder = i18Obj[lang].inputName
-            lastName.placeholder = i18Obj[lang].inputLastName
+            email.placeholder = i18Obj[lang].email
             subject.placeholder = i18Obj[lang].subject
         }
     )
@@ -63,7 +69,8 @@ const nameSection = document.querySelector('.name__wrapper');
 const inputs = document.querySelectorAll('.contact__input');
 const portfolioCardName = document.querySelectorAll('.portfolio__card-name');
 const headerLink = document.querySelectorAll('.header__link');
-const arrow = document.querySelector('.arrow');
+
+
 
 
 themeButton.addEventListener('click',  () =>  changeTheme(themeArr, theme) )
@@ -99,7 +106,6 @@ let changeTheme = (themeArr) => {
         })
         nav.classList.toggle('dark-theme')
     }
-    arrow.classList.toggle('dark-arrow')
     nameImg.classList.toggle('dark-img')
     themeButton.classList.toggle('dark-button-theme')
     if (theme === 'light') {
@@ -157,3 +163,36 @@ function getLocalStorage() {
 window.addEventListener('load', getLocalStorage)
 
 // Local storage end
+
+//email 
+
+let form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      let status = document.getElementById("my-form-status");
+      let data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
