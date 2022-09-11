@@ -241,6 +241,7 @@ main {
   position: relative;
   overflow: hidden;
   background: url(./assets/img/ava.jpg) no-repeat;
+  background-position: 30px 0;
   background-size: 100%;
 }
 .name__img:after {
@@ -691,6 +692,7 @@ footer {
     height: 250px;
     border-radius: 50%;
     margin-top: -100px;
+    background-position: 0 0;
   }
   .name__img:after {
     display: none;
