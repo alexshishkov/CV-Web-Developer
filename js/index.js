@@ -6,6 +6,7 @@ const nav = document.querySelector('.header__nav');
 const hamburger = document.querySelector('.hamburger');
 const arrayLinks  = document.querySelectorAll ('.header__item');
 const arrow = document.querySelector('.arrow');
+const lines = document.querySelectorAll('.line');
 
 function toggleMenu() {
     hamburger.classList.toggle('open');
@@ -29,6 +30,14 @@ arrow.addEventListener('click', () => {
     nav.classList.remove('header__nav_active');
     hamburger.classList.remove('open');
 } )
+
+window.addEventListener('scroll', () => {
+    if (theme === 'light') {
+        lines.forEach((elem) => {
+            window.scrollY > 140 && window.scrollY < 600 ? elem.classList.add("white-burger") : elem.classList.remove("white-burger") 
+        })
+    }
+});
 
 // burger end
 
@@ -58,6 +67,7 @@ function translation(lang) {
 //  translate end
 
 //  change theme start
+
 const themeButton = document.querySelector('.header__theme-button');
 const main = document.querySelector('main')
 const footer = document.querySelector('footer');
@@ -69,9 +79,6 @@ const nameSection = document.querySelector('.name__wrapper');
 const inputs = document.querySelectorAll('.contact__input');
 const portfolioCardName = document.querySelectorAll('.portfolio__card-name');
 const headerLink = document.querySelectorAll('.header__link');
-
-
-
 
 themeButton.addEventListener('click',  () =>  changeTheme(themeArr, theme) )
 
@@ -164,7 +171,7 @@ window.addEventListener('load', getLocalStorage)
 
 // Local storage end
 
-//email 
+// email start
 
 let form = document.getElementById("my-form");
     
@@ -196,3 +203,5 @@ let form = document.getElementById("my-form");
       });
     }
     form.addEventListener("submit", handleSubmit)
+
+// email end
