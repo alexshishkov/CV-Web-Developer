@@ -198,11 +198,6 @@ main {
 .name__contacts-wrap {
   display: flex;
 }
-.name__contacts-wrap a {
-  width: 100px;
-  height: 100px;
-  margin-left: 4em;
-}
 .name__contacts-img {
   width: 100px;
   height: 100px;
@@ -219,6 +214,7 @@ main {
   font-family: Georgia;
   font-size: 0.9em;
   margin-bottom: 0.3em;
+  color: white;
 }
 .name__info-contact img {
   width: 1.5em;
@@ -229,6 +225,11 @@ main {
 }
 .img {
   filter: invert();
+}
+.github {
+  width: 100px;
+  height: 100px;
+  margin-left: 4em;
 }
 .name__info-links {
   display: flex;
@@ -323,7 +324,7 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.skills__skill img {
+.skills__skill-img {
   width: 100px;
   height: 100px;
 }
@@ -514,7 +515,7 @@ main {
   outline: none;
   margin-bottom: 1em;
   padding: 10px;
-  color: #686868;
+  color: #424242;
 }
 .last-input {
   height: 5.7em;
@@ -566,7 +567,7 @@ footer {
     font-size: 0.8em;
     margin-bottom: 1.5em;
   }
-  .name__contacts-wrap a {
+  .github {
     width: 70px;
     height: 70px;
     margin-left: 0.5em;
@@ -584,7 +585,7 @@ footer {
   .skills__info {
     padding: 1em;
   }
-  .skills__skill img {
+  .skills__skill-img {
     width: 70px;
     height: 70px;
   }
@@ -730,7 +731,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .name__contacts-wrap a {
+  .github {
     width: 100px;
     height: 100px;
     margin-left: 0;
@@ -808,7 +809,7 @@ footer {
     justify-content: space-around;
   }
   .certificat {
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin-top: 3em;
   }
@@ -882,17 +883,17 @@ footer {
 
 .dark-theme {
   background: #252525;
-  color: #686868;
+  color: #b4b4b4;
 }
 .dark-footer-input {
-  color: #686868;
+  color: #b4b4b4;
 }
 .dark-button {
   color: #252525;
   font-weight: 600;
 }
 .name__img-dark {
-  filter: invert(30%);
+  filter: invert(50%);
 }
 .dark-img::after {
   background: #252525;
@@ -902,7 +903,7 @@ footer {
   background-size: 100%;
 }
 .dark-card-name {
-  color: #686868;
+  color: #b4b4b4;
 }
 
 /* change theme end */

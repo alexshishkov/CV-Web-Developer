@@ -73,7 +73,9 @@ const main = document.querySelector('main')
 const footer = document.querySelector('footer');
 const buttons = document.querySelectorAll('.button')
 const nameInfo = document.querySelector('.name__info');
+const contacts = document.querySelectorAll('.name__info-contact')
 const Imgs = document.querySelectorAll('.img');
+const skillsImgs = document.querySelectorAll('.skills__skill-img');
 const nameImg = document.querySelector('.name__img');
 const nameSection = document.querySelector('.name__wrapper');
 const inputs = document.querySelectorAll('.contact__input');
@@ -98,7 +100,13 @@ let changeTheme = (themeArr) => {
     buttons.forEach((e) => {
         e.classList.toggle('dark-button')
     })
+    contacts.forEach((e) => {
+        e.classList.toggle('dark-card-name')
+    })
     Imgs.forEach((e) => {
+        e.classList.toggle('name__img-dark')
+    })
+    skillsImgs.forEach((e) => {
         e.classList.toggle('name__img-dark')
     })
     inputs.forEach((e) => {

@@ -39,11 +39,11 @@
         </ul>
       </nav>
       <div class="header__swith">
-        <button class="header__button header__swith-en active__button languageEn">
+        <button class="header__button header__swith-en languageEn">
           en
         </button>
         <div>/</div>
-        <button class="header__button header__swith-ru active__button languageRu">
+        <button class="header__button header__swith-ru languageRu">
           ru
         </button>
         <button class="header__theme-button"></button>
@@ -69,37 +69,32 @@
             </div>
             <div class="name__contacts-wrap" id="aboutMe">
               <div class="name__info-contacts">
-                <div class="name__info-contact">
+                <a class='name__info-contact' href="mailto:aleksejmocny@gmail.com">
                   <img class='img' src="./assets/img/mail.svg" alt="email" />aleksejmocny@gmail.com
-                </div>
-                <div class="name__info-contact">
-                  <img class='img' src="./assets/img/call.svg" alt="email" />
-                  +375 44 744 31 54
-                </div>
+                </a>
+                <a class='name__info-contact' href="tel:+375 44 744 31 54">
+                  <img class='img' src="./assets/img/call.svg" alt="email" />+375 44 744 31 54
+                </a>
               </div>
-              <a href="https://github.com/alexshishkov"><img class="name__contacts-img img gitImg"
+              <a class='github' href="https://github.com/alexshishkov"><img class="name__contacts-img img gitImg"
                   src="./assets/img/github.png" alt="github" /></a>
             </div>
             <ul class="name__info-links">
-              <li>
-                <a href="https://www.instagram.com/aleksei___shishkov/"><img class='img linkimg' src="./assets/img/inst.png"
-                    alt="instagram" /></a>
-              </li>
               <li>
                 <a href="https://t.me/alexeyshishkov"><img class='img linkimg' src="./assets/img/telegram.png"
                     alt="telegram" /></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/alexey-shishkov/"><img class='img linkimg' src="./assets/img/linkedin.png"
-                    alt="linkedin" /></a>
+                <a href="https://www.linkedin.com/in/alexey-shishkov/"><img class='img linkimg'
+                    src="./assets/img/linkedin.png" alt="linkedin" /></a>
               </li>
               <li>
-                <a href="https://join.skype.com/invite/MuZOXFVjhEtb"><img class='img linkimg' src="./assets/img/skype.png"
-                    alt="skype" /></a>
+                <a href="https://join.skype.com/invite/MuZOXFVjhEtb"><img class='img linkimg'
+                    src="./assets/img/skype.png" alt="skype" /></a>
               </li>
               <li>
-                <a href="https://www.codewars.com/users/alexshishkov"><img class='img linkimg' src="./assets/img/code wars.png"
-                    alt="code wars" /></a>
+                <a href="https://www.codewars.com/users/alexshishkov"><img class='img linkimg'
+                    src="./assets/img/code wars.png" alt="code wars" /></a>
               </li>
             </ul>
           </div>
@@ -129,37 +124,37 @@
         <div class="skills__info" data-aos="zoom-in" data-aos-duration="1500">
           <div class="skills__skill-wrap-top">
             <div class="skills__skill skills__skill-top">
-              <img src="./assets/img/icons8-html-5-100.png" alt="HTML" />
+              <img class="skills__skill-img" src="./assets/img/icons8-html-5-100.png" alt="HTML" />
               <div>HTML</div>
             </div>
             <div class="skills__skill skills__skill-top">
-              <img src="./assets/img/icons8-css-файл-100.png" alt="CSS" />
+              <img class="skills__skill-img" src="./assets/img/icons8-css-файл-100.png" alt="CSS" />
               <div>CSS</div>
             </div>
             <div class="skills__skill skills__skill-top">
-              <img src="./assets/img/icons8-node-js-128.png" alt="JS" />
+              <img class="skills__skill-img" src="./assets/img/icons8-node-js-128.png" alt="JS" />
               <div>JS</div>
             </div>
             <div class="skills__skill skills__skill-top">
-              <img src="./assets/img/icons8-typescript-100.png" alt="TS" />
+              <img class="skills__skill-img" src="./assets/img/icons8-typescript-100.png" alt="TS" />
               <div>TS</div>
             </div>
           </div>
           <div class="skills__skill-wrap-bottom">
             <div class="skills__skill skills__skill-bottom">
-              <img src="./assets/img/icons8-реакция-100.png" alt="REACT" />
+              <img class="skills__skill-img" src="./assets/img/icons8-реакция-100.png" alt="REACT" />
               <div>REACT</div>
             </div>
             <div class="skills__skill skills__skill-bottom">
-              <img src="./assets/img/redux.png" alt="REDUX" />
+              <img class="skills__skill-img" src="./assets/img/redux.png" alt="REDUX" />
               <div>REDUX</div>
             </div>
             <div class="skills__skill skills__skill-bottom">
-              <img src="./assets/img/icons8-git-100.png" alt="GIT" />
+              <img class="skills__skill-img" src="./assets/img/icons8-git-100.png" alt="GIT" />
               <div>GIT</div>
             </div>
             <div class="skills__skill skills__skill-bottom">
-              <img src="./assets/img/webpack.png" alt="WEBPACK" />
+              <img class="skills__skill-img" src="./assets/img/webpack.png" alt="WEBPACK" />
               <div>WEBPACK</div>
             </div>
           </div>
@@ -190,8 +185,7 @@
                 <div>T</div>
               </div>
             </div>
-            <a href="https://final-task-team-62-react-2022q3.netlify.app/"
-              class="portfolio__card">
+            <a href="https://final-task-team-62-react-2022q3.netlify.app/" class="portfolio__card">
               <img src="./assets/img/task manager.jpg" alt="task manager" />
               <div class='portfolio__card-name'>Task manager (React)</div>
             </a>
@@ -223,7 +217,8 @@
           </div>
 
           <div class="portfolio__card-wrapper" data-aos="fade-up" data-aos-duration="1000">
-            <a href="https://rolling-scopes-school.github.io/alexshishkov-JSFE2022Q1/shelter/pages/main/index.html" class="portfolio__card">
+            <a href="https://rolling-scopes-school.github.io/alexshishkov-JSFE2022Q1/shelter/pages/main/index.html"
+              class="portfolio__card">
               <img src="./assets/img/shelter.jpg" alt="Shelter" />
               <div class='portfolio__card-name'>Shelter</div>
             </a>
@@ -265,10 +260,12 @@
           <img src="./assets/img/certificate.png" alt="certificates" />
           <h2 data-i18="certificates">Certificates</h2>
         </div>
-          <div class='cecertificates__wrapper'>
-            <a data-aos="flip-up" data-aos-duration="1200" href="https://app.rs.school/certificate/5byclzh7"><img class="certificat" src="./assets/img/pre-school-certificate.jpg" alt="pre-school-certificate"/></a>
-            <a data-aos="flip-left" data-aos-duration="1200" href="https://app.rs.school/certificate/6mdb3078"><img class="certificat" src="./assets/img/react-certificate.jpg" alt="react-certificate"/></a>
-          </div>  
+        <div class='cecertificates__wrapper'>
+          <a data-aos="flip-up" data-aos-duration="1200" href="https://app.rs.school/certificate/5byclzh7"><img
+              class="certificat" src="./assets/img/pre-school-certificate.jpg" alt="pre-school-certificate" /></a>
+          <a data-aos="flip-left" data-aos-duration="1200" href="https://app.rs.school/certificate/6mdb3078"><img
+              class="certificat" src="./assets/img/react-certificate.jpg" alt="react-certificate" /></a>
+        </div>
       </section>
       <section class="contact" id="contact" data-aos="zoom-in" data-aos-duration="1200">
         <div class="title">
@@ -279,7 +276,8 @@
           <form class="contact__forms" id="my-form" action="https://formspree.io/f/xrgderzq" method="POST">
             <input class="contact__input contact__input-name" type="name" name="name" placeholder='Name' />
             <input class="contact__input contact__input-email" type="email" name="email" placeholder='Email' />
-            <textarea class="contact__input last-input subject" type="text" name="message" placeholder='Subject'></textarea>
+            <textarea class="contact__input last-input subject" type="text" name="message"
+              placeholder='Subject'></textarea>
             <button class="button" id="my-form-button" data-i18="send">Send</button>
             <p id="my-form-status"></p>
           </form>
